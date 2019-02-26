@@ -1,5 +1,7 @@
 module Common.Utility exposing (toUtcString, toUtcDateString)
 
+import Time exposing (Posix, Month(..))
+
 
 toUtcString : Maybe Posix -> String
 toUtcString maybeTime =

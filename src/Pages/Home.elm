@@ -8,7 +8,7 @@ module Pages.Home
         )
 
 import SharedState exposing (SharedState, SharedStateUpdate(..))
-import Time
+import Time exposing (Posix)
 
 
 --
@@ -19,6 +19,7 @@ import Element.Font as Font
 import Element.Input as Input
 import Element.Lazy
 import Common.Style as Style
+import Common.Utility as Utility
 
 
 --
@@ -64,6 +65,6 @@ view sharedState model =
             { onPress = Just (IncrementCounter)
             , label = el [] (text "Increment counter")
             }
-        , el [ Font.size 16 ] (text <| "Unix time: " ++ (String.fromInt (Time.posixToMillis sharedState.currentTime)))
+        , el [ Font.size 16 ] (text <| "UTC: " ++ Utility.toUtcString (Just sharedState.currentTime))
         , el [ Font.size 16 ] (text <| "Secret = " ++ sharedState.secret)
         ]
