@@ -21,4 +21,4 @@ And three cheers to Ohanhi for this great design!
 
 ## Installation
 
-For now: `elm make src/Main.elm`.  The `elm reactor` and click on `index.html`
+For now: `elm make src/Main.elm --output=Main.js`.  The `elm reactor` and click on `index.html`
