@@ -4,7 +4,10 @@ This app is a simplified version of Ohanhi's [Shared State Demo](https://github.
 
 Note that in the Settings page, one can define a shared secret.  This is
 an example of a child page updating the state of the parent.  The parent
-state — the `SharedState` is visible to all child pages.  Thus there is a
+state — the `SharedState` is visible in all child pages.  In the present
+demo, the shared secret is displyed on the Home page.
+
+Thus there is a
 simple mechanism for a login page to ask for a session token by Http, then
 share this token to other pages.  Consequently, using a template like the
 present app, one can build a standard login system which can be used as
