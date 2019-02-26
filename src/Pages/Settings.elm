@@ -12,18 +12,9 @@ import Browser.Navigation exposing (pushUrl)
 import Routing.Helpers exposing (Route(..), reverseRoute)
 import SharedState exposing (SharedState, SharedStateUpdate(..))
 import Time
-
-
---
-
 import Element exposing (..)
-import Element.Background as Background
 import Element.Font as Font
 import Element.Input as Input
-import Element.Lazy
-
-
---
 
 
 type alias Model =

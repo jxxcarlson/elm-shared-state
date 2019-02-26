@@ -9,20 +9,11 @@ module Pages.Home
 
 import SharedState exposing (SharedState, SharedStateUpdate(..))
 import Time exposing (Posix)
-
-
---
-
 import Element exposing (..)
-import Element.Background as Background
 import Element.Font as Font
 import Element.Input as Input
-import Element.Lazy
 import Common.Style as Style
 import Common.Utility as Utility
-
-
---
 
 
 type alias Model =

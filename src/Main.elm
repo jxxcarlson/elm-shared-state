@@ -6,7 +6,6 @@ import Html exposing (..)
 import Routing.Router as Router
 import SharedState exposing (SharedState, SharedStateUpdate(..), initialSharedState)
 import Time exposing (Posix)
-import Types exposing (..)
 import Url exposing (Url)
 
 

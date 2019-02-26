@@ -8,19 +8,10 @@ import Routing.Helpers exposing (Route(..), parseUrl, reverseRoute)
 import SharedState exposing (SharedState, SharedStateUpdate(..))
 import Url exposing (Url)
 import Html exposing (Html)
-
-
---
-
 import Element exposing (..)
-import Element.Background as Background
 import Element.Font as Font
 import Element.Input as Input
-import Element.Lazy
 import Common.Style as Style
-
-
---
 
 
 type alias Model =
@@ -115,10 +106,6 @@ updateSettings sharedState model settingsMsg =
         )
 
 
-
--- view : (Msg -> msg) -> SharedState -> Model -> Browser.Document Msg
-
-
 view : (Msg -> msg) -> SharedState -> Model -> { body : List (Html.Html msg), title : String }
 view msgMapper sharedState model =
     let
@@ -154,12 +141,6 @@ view msgMapper sharedState model =
         { title = "Elm Shared State Demo"
         , body = body_ |> Element.layout [] |> Html.map msgMapper |> \x -> [ x ]
         }
-
-
-
--- |> Html.map msgMapper
--- Element.map Router.Msg |>
---  Html.map msgMapper
 
 
 pageView : SharedState -> Model -> Element Msg
